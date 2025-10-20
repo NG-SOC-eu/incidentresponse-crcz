@@ -1,4 +1,5 @@
 ---
+#playbook scenario 1d
 - name: Configure NG-SOC analyst console
   hosts: ng_soc
   become: true
