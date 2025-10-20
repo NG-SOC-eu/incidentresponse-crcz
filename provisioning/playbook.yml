@@ -7,18 +7,18 @@
     - role: rep_core
 
 - name: Prepare the reporting workspace analytics stack
-  hosts: reporting_workspace
+  hosts: reporting-workspace
   become: true
   roles:
-    - role: reporting_workspace
+    - role: reporting-workspace
 
 - name: Personalise the instructor console
-  hosts: instructor_console
+  hosts: instructor-console
   become: true
   roles:
-    - role: instructor_console
+    - role: instructor-console
 
 - name: Stage trainee lab resources
-  hosts: trainees
+  hosts: trainee-workstation-01, trainee-workstation-02
   roles:
-    - role: trainee_workstation
+    - role: trainee-workstation
