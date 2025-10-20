@@ -69,8 +69,8 @@
   ansible.builtin.uri:
     url: "{{ rep_core_healthcheck.url }}"
     method: GET
-    status_code: {{ rep_core_healthcheck.status_code }}
-    validate_certs: {{ rep_core_healthcheck.validate_certs }}
+    status_code: "{{ rep_core_healthcheck.status_code }}"
+    validate_certs: "{{ rep_core_healthcheck.validate_certs }}"
   register: rep_core_health
   failed_when: rep_core_health.status != rep_core_healthcheck.status_code
   changed_when: false
