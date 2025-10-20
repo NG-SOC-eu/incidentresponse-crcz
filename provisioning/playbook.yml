@@ -1,32 +1,32 @@
 ---
 #playbook scenario 1d
 - name: Configure NG-SOC analyst console
-  hosts: ng_soc
+  hosts: ng-soc
   become: true
   roles:
-    - role: ng_soc
-      tags: ng_soc
+    - role: ng-soc
+      tags: ng-soc
 
 - name: Prepare NG-SIEM correlation engine
-  hosts: ng_siem
+  hosts: ng-siem
   become: true
   roles:
-    - role: ng_siem
-      tags: ng_siem
+    - role: ng-siem
+      tags: ng-siem
 
 - name: Deploy NG-SOAR automation stack
-  hosts: ng_soar
+  hosts: ng-soar
   become: true
   roles:
-    - role: ng_soar
-      tags: ng_soar
+    - role: ng-soar
+      tags: ng-soar
 
 - name: Enable CTI-SS enrichment services
-  hosts: cti_ss
+  hosts: cti-ss
   become: true
   roles:
-    - role: cti_ss
-      tags: cti_ss
+    - role: cti-ss
+      tags: cti-ss
 
 - name: Configure CICMS operator workspace
   hosts: cicms
@@ -36,15 +36,15 @@
       tags: cicms
 
 - name: Publish playbook library portal
-  hosts: playbook_library
+  hosts: playbook-library
   become: true
   roles:
-    - role: playbook_library
-      tags: playbook_library
+    - role: playbook-library
+      tags: playbook-library
 
 - name: Start telemetry simulator feeds
-  hosts: telemetry_feeder
+  hosts: telemetry-simulator
   become: true
   roles:
-    - role: telemetry_feeder
-      tags: telemetry_feeder
+    - role: telemetry-simulator
+      tags: telemetry-simulator
