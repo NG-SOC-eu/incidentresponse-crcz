@@ -32,13 +32,13 @@ hosts:
     flavor: standard.medium
   - name: trainee-workstation-01
     base_box:
-      image: windows10-x64
+      image: windows-10
       mgmt_user: Administrator
       mgmt_protocol: winrm
     flavor: standard.medium
   - name: trainee-workstation-02
     base_box:
-      image: windows10-x64
+      image: windows-10
       mgmt_user: Administrator
       mgmt_protocol: winrm
     flavor: standard.medium
