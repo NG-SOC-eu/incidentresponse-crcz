@@ -93,3 +93,4 @@ router_mappings:
   - router: rep-gateway
     network: analytics-zone
     ip: 10.20.30.1
+groups: []
