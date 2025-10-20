@@ -1,10 +1,10 @@
 ---
 #Playbook for subcase 1a
 - name: Configure REP core services
-  hosts: rep_core
+  hosts: rep-scheduler, rep-live-session, rep-quiz-engine, rep-practical-labs
   become: true
   roles:
-    - role: rep_core
+    - role: rep-core
 
 - name: Prepare the reporting workspace analytics stack
   hosts: reporting-workspace
