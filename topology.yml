@@ -1,4 +1,4 @@
-name: subcase_1d_ng_soc_operation
+name: subcase-1d-ng-soc-operation
 hosts:
   - name: ng-soc
     base_box:
@@ -95,3 +95,4 @@ router_mappings:
   - router: ng-ops-gateway
     network: telemetry-zone
     ip: 10.30.50.1
+groups: []
