@@ -172,6 +172,26 @@
       - "portainer_data:/data"
   register: portainer_output
 
+- name: Inject MISP integration settings into DFIR-IRIS .env
+  lineinfile:
+    path: /opt/dfir-iris-custom/.env
+    regexp: '^IRIS_MISP_URL='
+    line: "IRIS_MISP_URL=https://10.30.30.10:8443"
+    state: present
+
+- name: Disable SSL verification for MISP connection
+  lineinfile:
+    path: /opt/dfir-iris-custom/.env
+    regexp: '^IRIS_MISP_VERIFY_CERT='
+    line: "IRIS_MISP_VERIFY_CERT=false"
+
+- name: Inject MISP key into DFIR-IRIS .env
+  lineinfile:
+    path: /opt/dfir-iris-custom/.env
+    regexp: '^IRIS_MISP_KEY='
+    line: "IRIS_MISP_KEY={{ hostvars['cti_ss'].misp_api_key }}"
+    state: present
+
 - name: Build and run DFIR-IRIS
   community.docker.docker_compose_v2:
     project_src: "/opt/dfir-iris-custom"
