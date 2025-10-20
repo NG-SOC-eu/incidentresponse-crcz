@@ -170,3 +170,4 @@
 - name: Save MISP API key fact
   set_fact:
     misp_api_key: "{{ misp_user_info.stdout.split('Old authentication keys disabled and new key created: ')[1] | trim }}"
+  delegate_facts: true
