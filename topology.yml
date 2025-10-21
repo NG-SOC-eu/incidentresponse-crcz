@@ -1,4 +1,4 @@
-name: subcase_1a_phishing_awareness
+name: subcase-1a-phishing-awareness
 hosts:
   - name: instructor-console
     base_box:
