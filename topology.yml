@@ -1,4 +1,4 @@
-name: subcase_1d_ng_soc_operation
+name: subcase-1d-ng-soc-operation
 hosts:
   - name: ng-soc
     base_box:
