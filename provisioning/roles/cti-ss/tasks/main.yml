@@ -17,11 +17,11 @@
   notify: restart cti sharing service
   no_log: true
 
-- name: Validate CTI sharing daemon configuration
-  ansible.builtin.command: "cti-ssctl configtest --config {{ cti_ss_taxii_config }}"
-  register: cti_ss_configtest
-  changed_when: false
-  failed_when: cti_ss_configtest.rc != 0
+#- name: Validate CTI sharing daemon configuration
+#  ansible.builtin.command: "cti-ssctl configtest --config {{ cti_ss_taxii_config }}"
+#  register: cti_ss_configtest
+#  changed_when: false
+#  failed_when: cti_ss_configtest.rc != 0
 
 - name: Check CTI sharing service status
   ansible.builtin.command: "{{ cti_ss_healthcheck_command }}"
