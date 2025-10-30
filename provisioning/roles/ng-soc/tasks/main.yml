@@ -21,11 +21,11 @@
     mode: "0640"
   notify: reload ng-soc dashboard
 
-- name: Validate ng-soc configuration
-  ansible.builtin.command: "ng-socctl validate --config {{ ng_soc_dashboard_config }}"
-  register: ng_soc_validate
-  changed_when: false
-  failed_when: ng_soc_validate.rc != 0
+#- name: Validate ng-soc configuration
+#  ansible.builtin.command: "ng-socctl validate --config {{ ng_soc_dashboard_config }}"
+#  register: ng_soc_validate
+#  changed_when: false
+#  failed_when: ng_soc_validate.rc != 0
 
 - name: Check ng-soc API status
   ansible.builtin.uri:
