@@ -22,7 +22,7 @@
   loop: "{{ playbook_library_playbooks | list }}"
   loop_control:
     loop_var: playbook
-  notify: reload cacao playbooks
+#  notify: reload cacao playbooks
 
 - name: Publish playbook index metadata
   ansible.builtin.template:
@@ -31,7 +31,7 @@
     owner: root
     group: cacao
     mode: "0640"
-  notify: reload cacao playbooks
+#  notify: reload cacao playbooks
 
 #- name: Validate CACAO library
 #  ansible.builtin.command: "{{ playbook_library_healthcheck_command }}"
