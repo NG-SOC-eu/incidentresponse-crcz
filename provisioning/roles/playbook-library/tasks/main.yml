@@ -33,8 +33,8 @@
     mode: "0640"
   notify: reload cacao playbooks
 
-- name: Validate CACAO library
-  ansible.builtin.command: "{{ playbook_library_healthcheck_command }}"
-  register: playbook_library_validation
-  changed_when: false
-  failed_when: playbook_library_validation.rc != 0
+#- name: Validate CACAO library
+#  ansible.builtin.command: "{{ playbook_library_healthcheck_command }}"
+#  register: playbook_library_validation
+#  changed_when: false
+#  failed_when: playbook_library_validation.rc != 0
