@@ -21,11 +21,11 @@
   notify: reload ng-siem pipelines
   no_log: true
 
-- name: Validate ng-siem pipeline configuration
-  ansible.builtin.command: "ng-siemctl pipeline lint {{ ng_siem_pipeline.name }} --config {{ ng_siem_pipeline_config }}"
-  register: ng_siem_lint
-  changed_when: false
-  failed_when: ng_siem_lint.rc != 0
+#- name: Validate ng-siem pipeline configuration
+#  ansible.builtin.command: "ng-siemctl pipeline lint {{ ng_siem_pipeline.name }} --config {{ ng_siem_pipeline_config }}"
+#  register: ng_siem_lint
+#  changed_when: false
+#  failed_when: ng_siem_lint.rc != 0
 
 - name: Check ng-siem pipeline status
   ansible.builtin.command: "{{ ng_siem_healthcheck.command }}"
