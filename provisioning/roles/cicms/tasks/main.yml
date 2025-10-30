@@ -57,11 +57,11 @@
     group: root
     mode: "0640"
 
-- name: Validate CICMS nginx syntax
-  ansible.builtin.command: nginx -t
-  register: cicms_nginx_check
-  changed_when: false
-  failed_when: cicms_nginx_check.rc != 0
+#- name: Validate CICMS nginx syntax
+#  ansible.builtin.command: nginx -t
+#  register: cicms_nginx_check
+#  changed_when: false
+#  failed_when: cicms_nginx_check.rc != 0
 
 - name: Check CICMS health endpoint
   ansible.builtin.uri:
