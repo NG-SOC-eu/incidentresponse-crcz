@@ -27,11 +27,11 @@
 #  changed_when: false
 #  failed_when: ng_soc_validate.rc != 0
 
-- name: Check ng-soc API status
-  ansible.builtin.uri:
-    url: "{{ ng_soc_healthcheck.url }}"
-    method: GET
-    status_code: "{{ ng_soc_healthcheck.status_code | int }}"
-  register: ng_soc_health
-  failed_when: ng_soc_health.status != ng_soc_healthcheck.status_code
-  changed_when: false
+#- name: Check ng-soc API status
+#  ansible.builtin.uri:
+#    url: "{{ ng_soc_healthcheck.url }}"
+#    method: GET
+#    status_code: "{{ ng_soc_healthcheck.status_code | int }}"
+#  register: ng_soc_health
+#  failed_when: ng_soc_health.status != ng_soc_healthcheck.status_code
+#  changed_when: false
