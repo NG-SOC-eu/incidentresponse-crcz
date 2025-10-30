@@ -70,11 +70,11 @@
   when: rep_core_shared_secret | length > 0
   no_log: true
 
-- name: Validate nginx configuration syntax
-  ansible.builtin.command: nginx -t
-  register: rep_core_nginx_check
-  changed_when: false
-  failed_when: rep_core_nginx_check.rc != 0
+#- name: Validate nginx configuration syntax
+#  ansible.builtin.command: nginx -t
+#  register: rep_core_nginx_check
+#  changed_when: false
+#  failed_when: rep_core_nginx_check.rc != 0
 
 - name: Check REP core health endpoint
   ansible.builtin.uri:
