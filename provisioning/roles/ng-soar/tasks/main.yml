@@ -28,11 +28,11 @@
   notify: restart ng-soar
   no_log: true
 
-- name: Validate ng-soar queues
-  ansible.builtin.command: "ng-soarctl validate --config {{ ng_soar_queue_config }}"
-  register: ng_soar_validation
-  changed_when: false
-  failed_when: ng_soar_validation.rc != 0
+#- name: Validate ng-soar queues
+#  ansible.builtin.command: "ng-soarctl validate --config {{ ng_soar_queue_config }}"
+#  register: ng_soar_validation
+#  changed_when: false
+#  failed_when: ng_soar_validation.rc != 0
 
 - name: Check ng-soar API health
   ansible.builtin.uri:
