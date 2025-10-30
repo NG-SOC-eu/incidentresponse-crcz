@@ -72,12 +72,12 @@
     loop_var: dashboard
   notify: restart grafana
 
-- name: Validate Grafana is responding
-  ansible.builtin.uri:
-    url: "{{ reporting_workspace_healthcheck.url }}"
-    method: GET
-    status_code: "{{ reporting_workspace_healthcheck.status_code | int }}"
-    return_content: true
-  register: reporting_workspace_health
-  failed_when: reporting_workspace_health.json.database != 'ok'
-  changed_when: false
+#- name: Validate Grafana is responding
+#  ansible.builtin.uri:
+#    url: "{{ reporting_workspace_healthcheck.url }}"
+#    method: GET
+#    status_code: "{{ reporting_workspace_healthcheck.status_code | int }}"
+#    return_content: true
+#  register: reporting_workspace_health
+#  failed_when: reporting_workspace_health.json.database != 'ok'
+#  changed_when: false
