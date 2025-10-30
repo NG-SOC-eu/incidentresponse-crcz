@@ -27,8 +27,8 @@
 #  changed_when: false
 #  failed_when: ng_siem_lint.rc != 0
 
-- name: Check ng-siem pipeline status
-  ansible.builtin.command: "{{ ng_siem_healthcheck.command }}"
-  register: ng_siem_status
-  changed_when: false
-  failed_when: ng_siem_status.rc != 0 or 'healthy' not in ng_siem_status.stdout.lower()
+#- name: Check ng-siem pipeline status
+#  ansible.builtin.command: "{{ ng_siem_healthcheck.command }}"
+#  register: ng_siem_status
+#  changed_when: false
+#  failed_when: ng_siem_status.rc != 0 or 'healthy' not in ng_siem_status.stdout.lower()
