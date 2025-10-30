@@ -142,12 +142,12 @@
     insertafter: EOF
     backup: yes
 
-- name: Deployment of MISP Docker
-  community.docker.docker_compose_v2:
-    project_src: "/opt/misp-docker"
-    state: present
-    build: always
-  register: misp_output
+#- name: Deployment of MISP Docker
+#  community.docker.docker_compose_v2:
+#    project_src: "/opt/misp-docker"
+#    state: present
+#    build: always
+#  register: misp_output
 
 - name: Deploy Portainer
   community.docker.docker_container:
