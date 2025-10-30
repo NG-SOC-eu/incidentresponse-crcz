@@ -162,13 +162,13 @@
       - "portainer_data:/data"
   register: portainer_output
 
-- name: Get or generate MISP API key for admin user
-  community.docker.docker_container_exec:
-    container: misp-docker-misp-core-1
-    command: "/var/www/MISP/app/Console/cake user change_authkey admin@admin.test"
-  register: misp_user_info
+#- name: Get or generate MISP API key for admin user
+#  community.docker.docker_container_exec:
+#    container: misp-docker-misp-core-1
+#    command: "/var/www/MISP/app/Console/cake user change_authkey admin@admin.test"
+#  register: misp_user_info
 
-- name: Save MISP API key fact
-  set_fact:
-    misp_api_key: "{{ misp_user_info.stdout.split('Old authentication keys disabled and new key created: ')[1] | trim }}"
-  delegate_facts: true
+#- name: Save MISP API key fact
+#  set_fact:
+#    misp_api_key: "{{ misp_user_info.stdout.split('Old authentication keys disabled and new key created: ')[1] | trim }}"
+#  delegate_facts: true
